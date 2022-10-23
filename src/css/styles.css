@@ -29,6 +29,7 @@ body {
   margin: 0 auto;
   padding: 8px;
   max-width: 320px;
+  align-items: center;
 }
 
 .input {
@@ -36,11 +37,21 @@ body {
   height: 25px;
   margin-right: 0;
   padding: 5px;
+  border-radius: 3px 0px 0px 3px;
+  border: 0;
 }
 
 .btn-search {
 height: 25px;
 border: 0;
+color: #212121dd;
+border-color: inherit;
+border-radius: 0px 3px 3px 0px;
+}
+
+.btn-search:hover{
+  color: black;
+  
 }
 
 .gallery {
