@@ -1,5 +1,7 @@
 const axios = require('axios').default;
 import Notiflix from 'notiflix';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { fetchPhotos } from './js/fetchPhotos';
 import { renderMarkup } from './js/renderMarkup';
@@ -9,9 +11,11 @@ const input = document.querySelector('input');
 const galleryContainer = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 
+let searchValue = '';
 let pageNumber = 1;
 loadMoreBtn.style.display = 'none';
-let searchValue = '';
+
+const lightboxGallery = new SimpleLightbox('.gallery a');
 
 form.addEventListener('submit', onSubmitSearch);
 loadMoreBtn.addEventListener('click', onClickGetMorePhotos);
@@ -34,6 +38,7 @@ function onSubmitSearch(evt) {
           loadMoreBtn.style.display = 'block';
         }
       }
+      lightboxGallery.refresh();
     });
   }
 }
