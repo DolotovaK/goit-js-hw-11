@@ -60,7 +60,7 @@ border-radius: 0px 3px 3px 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .photo-card {
@@ -92,14 +92,17 @@ justify-content: center;
   margin-top: 30px;
   width: 150px;
   height: 50px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: rgb(51, 97, 197);
   color: #fafafa;
   border-radius: 5px;
   border-color: inherit;
+  text-transform: uppercase;
+
 }
 
 .load-more:hover,
 .load-more:focus {
   color: khaki;
+  
 }
